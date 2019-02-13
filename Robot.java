@@ -15,11 +15,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.subsystems.Pneumatics;
 import frc.robot.subsystems.DriveTrain;
-import frc.robot.subsystems.Camera;
-import frc.robot.subsystems.CameraServer;
 import frc.robot.commands.MecanumDriveStick;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.commands.AutonTest;
+import frc.robot.subsystems.I2C_Interface;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -30,6 +29,7 @@ import frc.robot.commands.AutonTest;
  */
 public class Robot extends TimedRobot {
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
+  public  I2C_Interface camera = new I2C_Interface();
   public static DriveTrain driveTrain = new DriveTrain();
   public static Pneumatics pneumatics = new Pneumatics();
   public static OI m_oi;
